@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace a_v_t_o_m_a_t__v10
 {
-    enum States { s, e, f, t1, t2, a1, a2, a3, a4, b, i1, i11, i2, c1, c11, c12, c121, c131, c13, c2, c21, k1, k11, k12, k13, k2, k21, k22, k23, k3, k31, k32, k33, k34, k35, k4, k41, k42, k43, k44, k45, k5,k51,k52,k53,k54,k55,k56,k6,k61,k62,k63, k7, k71,k72,k73,k74,d0,d1,d2,d3,dd22, d222, de, df};
+    enum States { s, e, f, t1, t2, a1, a2, a3, a4, b, i1, i11, i2, c1, c11, c12, c121, c131, c13, c2, c21, k1, k11, k12, k13, k2, k21, k22, k23, k3, k31, k32, k33, k34, k35, k4, k41, k42, k43, k44, k45, k5, k51, k52, k53, k54, k55, k56, k6, k61, k62, k63, k7, k71, k72, k73, k74, d0, d1, d2, d3, d22, d222, de, df, e1, e12, e13, e2, e21, e3, e31, e32, e33, e4, e41, e42, e43, e5, e51, e52, e53, e6, e61, e62, e63, e7, e71, e72, e73, e74, e75, e8, e82, e83, e84, e85, e86, e87, e88, e89, e810, e9, e91, e92, e93, e94, e95, e96 };
     class SyntaxAuto
     {
         private int curPos, erPos;
@@ -23,7 +23,6 @@ namespace a_v_t_o_m_a_t__v10
             st = States.s;
             curPos = 0;
             char ch;
-            string word = "";
             while ((st != States.e)||(st != States.f)||(curPos <= this.str.Length)){
                 ch = str[curPos];
                 switch (st)
@@ -36,7 +35,6 @@ namespace a_v_t_o_m_a_t__v10
                             break;
                         }
                         if (ch == 'v') st = States.a1; else st = States.e;
-                        word = "";
                         break;
                     case States.a1:
                         if (ch == 'v')
@@ -81,7 +79,7 @@ namespace a_v_t_o_m_a_t__v10
                             curPos += 1;
                             break;
                         }
-                        if (((ch > 'a') && (ch < 'z')) || ((ch > 'A') && (ch < 'Z')) || (ch == '_') || ((ch > '0') && (ch < '9'))) st = States.i1;
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9'))) st = States.i1;
                         if (ch == ':') { st = States.b;
                             curPos += 1;
                             break; }
@@ -117,7 +115,7 @@ namespace a_v_t_o_m_a_t__v10
                             curPos += 1;
                             break;
                         }
-                        if (((ch > 'a') && (ch < 'z')) || ((ch > 'A') && (ch < 'Z')) || (ch == '_') || ((ch > '0') && (ch < '9')))
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
                         {
                             curPos += 1;
                             st = States.i2;
@@ -132,7 +130,7 @@ namespace a_v_t_o_m_a_t__v10
                             curPos += 1;
                             break;
                         }
-                        if (((ch > 'a') && (ch < 'z')) || ((ch > 'A') && (ch < 'Z')) || (ch == '_') || ((ch > '0') && (ch < '9')))
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
                         {
                             curPos += 1;
                             st = States.i2;
@@ -147,7 +145,7 @@ namespace a_v_t_o_m_a_t__v10
                             curPos += 1;
                             break;
                         }
-                        if (((ch > 'a') && (ch < 'z')) || ((ch > 'A') && (ch < 'Z')) || (ch == '_') || ((ch > '0') && (ch < '9')))
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
                         {
                             curPos += 1;
                             st = States.i2;
@@ -162,7 +160,7 @@ namespace a_v_t_o_m_a_t__v10
                             curPos += 1;
                             break;
                         }
-                        if (((ch > 'a') && (ch < 'z')) || ((ch > 'A') && (ch < 'Z')) || (ch == '_') || ((ch > '0') && (ch < '9')))
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
                         {
                             curPos += 1;
                             st = States.i2;
@@ -246,7 +244,7 @@ namespace a_v_t_o_m_a_t__v10
                             curPos++;
                             break;
                         }
-                        if (((ch > 'a') && (ch < 'z')) || ((ch > 'A') && (ch < 'Z')) || (ch == '_') || ((ch > '0') && (ch < '9')))
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
                         {
                             st = States.i2;
                             curPos++;
@@ -273,7 +271,7 @@ namespace a_v_t_o_m_a_t__v10
                             curPos++;
                             break;
                         }
-                        if (((ch > 'a') && (ch < 'z')) || ((ch > 'A') && (ch < 'Z')) || (ch == '_') || ((ch > '0') && (ch < '9')))
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
                         {
                             st = States.i2;
                             curPos++;
@@ -300,7 +298,7 @@ namespace a_v_t_o_m_a_t__v10
                             curPos++;
                             break;
                         }
-                        if (((ch > 'a') && (ch < 'z')) || ((ch > 'A') && (ch < 'Z')) || (ch == '_') || ((ch > '0') && (ch < '9')))
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
                         {
                             st = States.i2;
                             curPos++;
@@ -321,7 +319,7 @@ namespace a_v_t_o_m_a_t__v10
                         else st = States.e;
                         break;
                     case States.k13:
-                        if (((ch > 'a') && (ch < 'z')) || ((ch > 'A') && (ch < 'Z')) || (ch == '_') || ((ch > '0') && (ch < '9')))
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
                         {
                             st = States.i2;
                             curPos++;
@@ -348,7 +346,7 @@ namespace a_v_t_o_m_a_t__v10
                             curPos++;
                             break;
                         }
-                        if (((ch > 'a') && (ch < 'z')) || ((ch > 'A') && (ch < 'Z')) || (ch == '_') || ((ch > '0') && (ch < '9')))
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
                         {
                             st = States.i2;
                             curPos++;
@@ -375,7 +373,7 @@ namespace a_v_t_o_m_a_t__v10
                             curPos++;
                             break;
                         }
-                        if (((ch > 'a') && (ch < 'z')) || ((ch > 'A') && (ch < 'Z')) || (ch == '_') || ((ch > '0') && (ch < '9')))
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
                         {
                             st = States.i2;
                             curPos++;
@@ -402,7 +400,7 @@ namespace a_v_t_o_m_a_t__v10
                             curPos++;
                             break;
                         }
-                        if (((ch > 'a') && (ch < 'z')) || ((ch > 'A') && (ch < 'Z')) || (ch == '_') || ((ch > '0') && (ch < '9')))
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
                         {
                             st = States.i2;
                             curPos++;
@@ -423,7 +421,7 @@ namespace a_v_t_o_m_a_t__v10
                         else st = States.e;
                         break;
                     case States.k23:
-                        if (((ch > 'a') && (ch < 'z')) || ((ch > 'A') && (ch < 'Z')) || (ch == '_') || ((ch > '0') && (ch < '9')))
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
                         {
                             st = States.i2;
                             curPos++;
@@ -450,7 +448,7 @@ namespace a_v_t_o_m_a_t__v10
                             curPos++;
                             break;
                         }
-                        if (((ch > 'a') && (ch < 'z')) || ((ch > 'A') && (ch < 'Z')) || (ch == '_') || ((ch > '0') && (ch < '9')))
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
                         {
                             st = States.i2;
                             curPos++;
@@ -477,7 +475,7 @@ namespace a_v_t_o_m_a_t__v10
                             curPos++;
                             break;
                         }
-                        if (((ch > 'a') && (ch < 'z')) || ((ch > 'A') && (ch < 'Z')) || (ch == '_') || ((ch > '0') && (ch < '9')))
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
                         {
                             st = States.i2;
                             curPos++;
@@ -504,7 +502,7 @@ namespace a_v_t_o_m_a_t__v10
                             curPos++;
                             break;
                         }
-                        if (((ch > 'a') && (ch < 'z')) || ((ch > 'A') && (ch < 'Z')) || (ch == '_') || ((ch > '0') && (ch < '9')))
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
                         {
                             st = States.i2;
                             curPos++;
@@ -531,7 +529,7 @@ namespace a_v_t_o_m_a_t__v10
                             curPos++;
                             break;
                         }
-                        if (((ch > 'a') && (ch < 'z')) || ((ch > 'A') && (ch < 'Z')) || (ch == '_') || ((ch > '0') && (ch < '9')))
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
                         {
                             st = States.i2;
                             curPos++;
@@ -558,7 +556,7 @@ namespace a_v_t_o_m_a_t__v10
                             curPos++;
                             break;
                         }
-                        if (((ch > 'a') && (ch < 'z')) || ((ch > 'A') && (ch < 'Z')) || (ch == '_') || ((ch > '0') && (ch < '9')))
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
                         {
                             st = States.i2;
                             curPos++;
@@ -579,7 +577,7 @@ namespace a_v_t_o_m_a_t__v10
                         else st = States.e;
                         break;
                     case States.k35:
-                        if (((ch > 'a') && (ch < 'z')) || ((ch > 'A') && (ch < 'Z')) || (ch == '_') || ((ch > '0') && (ch < '9')))
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
                         {
                             st = States.i2;
                             curPos++;
@@ -599,6 +597,706 @@ namespace a_v_t_o_m_a_t__v10
                         }
                         else st = States.e;
                         break;
+                    case States.k4:
+                        if (ch == 'i')
+                        {
+                            st = States.k41;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == 't')
+                        {
+                            st = States.k7;
+                            curPos++;
+                            break;
+                        }
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
+                        {
+                            st = States.i2;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ' ')
+                        {
+                            st = States.t1;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ';')
+                        {
+                            st = States.t2;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.k41:
+                        if (ch == 'n')
+                        {
+                            st = States.k42;
+                            curPos++;
+                            break;
+                        }
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
+                        {
+                            st = States.i2;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ' ')
+                        {
+                            st = States.t1;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ';')
+                        {
+                            st = States.t2;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.k42:
+                        if (ch == 'g')
+                        {
+                            st = States.k43;
+                            curPos++;
+                            break;
+                        }
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
+                        {
+                            st = States.i2;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ' ')
+                        {
+                            st = States.t1;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ';')
+                        {
+                            st = States.t2;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.k43:
+                        if (ch == 'l')
+                        {
+                            st = States.k44;
+                            curPos++;
+                            break;
+                        }
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
+                        {
+                            st = States.i2;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ' ')
+                        {
+                            st = States.t1;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ';')
+                        {
+                            st = States.t2;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.k44:
+                        if (ch == 'e')
+                        {
+                            st = States.k45;
+                            curPos++;
+                            break;
+                        }
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
+                        {
+                            st = States.i2;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ' ')
+                        {
+                            st = States.t1;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ';')
+                        {
+                            st = States.t2;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.k45:
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
+                        {
+                            st = States.i2;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ' ')
+                        {
+                            st = States.t1;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ';')
+                        {
+                            st = States.t2;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.k5:
+                        if (ch == 'n')
+                        {
+                            st = States.k51;
+                            curPos++;
+                            break;
+                        }
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
+                        {
+                            st = States.i2;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ' ')
+                        {
+                            st = States.t1;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ';')
+                        {
+                            st = States.t2;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.k51:
+                        if (ch == 't')
+                        {
+                            st = States.k52;
+                            curPos++;
+                            break;
+                        }
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
+                        {
+                            st = States.i2;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ' ')
+                        {
+                            st = States.t1;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ';')
+                        {
+                            st = States.t2;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.k52:
+                        if (ch == 'e')
+                        {
+                            st = States.k53;
+                            curPos++;
+                            break;
+                        }
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
+                        {
+                            st = States.i2;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ' ')
+                        {
+                            st = States.t1;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ';')
+                        {
+                            st = States.t2;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.k53:
+                        if (ch == 'g')
+                        {
+                            st = States.k54;
+                            curPos++;
+                            break;
+                        }
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
+                        {
+                            st = States.i2;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ' ')
+                        {
+                            st = States.t1;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ';')
+                        {
+                            st = States.t2;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.k54:
+                        if (ch == 'e')
+                        {
+                            st = States.k55;
+                            curPos++;
+                            break;
+                        }
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
+                        {
+                            st = States.i2;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ' ')
+                        {
+                            st = States.t1;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ';')
+                        {
+                            st = States.t2;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.k55:
+                        if (ch == 'r')
+                        {
+                            st = States.k56;
+                            curPos++;
+                            break;
+                        }
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
+                        {
+                            st = States.i2;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ' ')
+                        {
+                            st = States.t1;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ';')
+                        {
+                            st = States.t2;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.k56:
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
+                        {
+                            st = States.i2;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ' ')
+                        {
+                            st = States.t1;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ';')
+                        {
+                            st = States.t2;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.k6:
+                        if (ch == 'e')
+                        {
+                            st = States.k61;
+                            curPos++;
+                            break;
+                        }
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
+                        {
+                            st = States.i2;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ' ')
+                        {
+                            st = States.t1;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ';')
+                        {
+                            st = States.t2;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.k61:
+                        if (ch == 'a')
+                        {
+                            st = States.k62;
+                            curPos++;
+                            break;
+                        }
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
+                        {
+                            st = States.i2;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ' ')
+                        {
+                            st = States.t1;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ';')
+                        {
+                            st = States.t2;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.k62:
+                        if (ch == 'l')
+                        {
+                            st = States.k63;
+                            curPos++;
+                            break;
+                        }
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
+                        {
+                            st = States.i2;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ' ')
+                        {
+                            st = States.t1;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ';')
+                        {
+                            st = States.t2;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.k7:
+                        if (ch == 'r')
+                        {
+                            st = States.k71;
+                            curPos++;
+                            break;
+                        }
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
+                        {
+                            st = States.i2;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ' ')
+                        {
+                            st = States.t1;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ';')
+                        {
+                            st = States.t2;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.k71:
+                        if (ch == 'i')
+                        {
+                            st = States.k72;
+                            curPos++;
+                            break;
+                        }
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
+                        {
+                            st = States.i2;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ' ')
+                        {
+                            st = States.t1;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ';')
+                        {
+                            st = States.t2;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.k72:
+                        if (ch == 'n')
+                        {
+                            st = States.k73;
+                            curPos++;
+                            break;
+                        }
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
+                        {
+                            st = States.i2;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ' ')
+                        {
+                            st = States.t1;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ';')
+                        {
+                            st = States.t2;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.k73:
+                        if (ch == 'g')
+                        {
+                            st = States.k74;
+                            curPos++;
+                            break;
+                        }
+                        if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) || (ch == '_') || ((ch >= '0') && (ch <= '9')))
+                        {
+                            st = States.i2;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ' ')
+                        {
+                            st = States.t1;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ';')
+                        {
+                            st = States.t2;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.k74:
+                        if (ch == '[')
+                        {
+                            st = States.d0;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ' ')
+                        {
+                            st = States.k74;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.d0:
+                        if (ch == '1')
+                        {
+                            st = States.d1;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == '2')
+                        {
+                            st = States.d2;
+                            curPos++;
+                            break;
+                        }
+                        if((ch >= '3') && (ch <= '9'))
+                        {
+                            st = States.d3;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.d1:
+                        if ((ch >= '0') && (ch <= '9'))
+                        {
+                            st = States.d3;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ' ')
+                        {
+                            st = States.de;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ']')
+                        {
+                            st = States.df;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.d2:
+                        if ((ch >= '0') && (ch <= '4'))
+                        {
+                            st = States.d3;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == '5')
+                        {
+                            st = States.d22;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ' ')
+                        {
+                            st = States.de;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ']')
+                        {
+                            st = States.df;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.d22:
+                        if ((ch >= '0') && (ch <= '5'))
+                        {
+                            st = States.d222;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ' ')
+                        {
+                            st = States.de;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ']')
+                        {
+                            st = States.df;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.d222:
+                        if (ch == ' ')
+                        {
+                            st = States.de;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ']')
+                        {
+                            st = States.df;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.d3:
+                        if (((ch >= '0') && (ch <= '9')) || (ch == ' '))
+                        {
+                            st = States.de;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ']')
+                        {
+                            st = States.df;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.de:
+                        if (ch == ' ')
+                        {
+                            st = States.de;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ']')
+                        {
+                            st = States.df;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    case States.df:
+                        if (ch == ' ')
+                        {
+                            st = States.t1;
+                            curPos++;
+                            break;
+                        }
+                        if (ch == ';')
+                        {
+                            st = States.t2;
+                            curPos++;
+                            break;
+                        }
+                        else st = States.e;
+                        break;
+                    
                     case States.e:
                         throw new Exception();
                 }
