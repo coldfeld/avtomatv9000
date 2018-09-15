@@ -1,0 +1,9 @@
+c:\users\ghettowhitestar\documents\visual studio 2017\Projects\a v t o m a t  v10\a v t o m a t  v10\obj\Debug\a v t o m a t  v10.csprojResolveAssemblyReference.cache
+c:\users\ghettowhitestar\documents\visual studio 2017\Projects\a v t o m a t  v10\a v t o m a t  v10\obj\Debug\a_v_t_o_m_a_t__v10.Form1.resources
+c:\users\ghettowhitestar\documents\visual studio 2017\Projects\a v t o m a t  v10\a v t o m a t  v10\obj\Debug\a_v_t_o_m_a_t__v10.Properties.Resources.resources
+c:\users\ghettowhitestar\documents\visual studio 2017\Projects\a v t o m a t  v10\a v t o m a t  v10\obj\Debug\a v t o m a t  v10.csproj.GenerateResource.Cache
+c:\users\ghettowhitestar\documents\visual studio 2017\Projects\a v t o m a t  v10\a v t o m a t  v10\bin\Debug\a v t o m a t  v10.exe.config
+c:\users\ghettowhitestar\documents\visual studio 2017\Projects\a v t o m a t  v10\a v t o m a t  v10\bin\Debug\a v t o m a t  v10.exe
+c:\users\ghettowhitestar\documents\visual studio 2017\Projects\a v t o m a t  v10\a v t o m a t  v10\bin\Debug\a v t o m a t  v10.pdb
+c:\users\ghettowhitestar\documents\visual studio 2017\Projects\a v t o m a t  v10\a v t o m a t  v10\obj\Debug\a v t o m a t  v10.exe
+c:\users\ghettowhitestar\documents\visual studio 2017\Projects\a v t o m a t  v10\a v t o m a t  v10\obj\Debug\a v t o m a t  v10.pdb
