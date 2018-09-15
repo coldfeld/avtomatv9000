@@ -7,3 +7,10 @@ c:\users\ghettowhitestar\documents\visual studio 2017\Projects\a v t o m a t  v1
 c:\users\ghettowhitestar\documents\visual studio 2017\Projects\a v t o m a t  v10\a v t o m a t  v10\bin\Debug\a v t o m a t  v10.pdb
 c:\users\ghettowhitestar\documents\visual studio 2017\Projects\a v t o m a t  v10\a v t o m a t  v10\obj\Debug\a v t o m a t  v10.exe
 c:\users\ghettowhitestar\documents\visual studio 2017\Projects\a v t o m a t  v10\a v t o m a t  v10\obj\Debug\a v t o m a t  v10.pdb
+C:\Users\User\Desktop\a v t o m a t  v10\a v t o m a t  v10\obj\Debug\a v t o m a t  v10.csprojAssemblyReference.cache
+C:\Users\User\Desktop\a v t o m a t  v10\a v t o m a t  v10\obj\Debug\a_v_t_o_m_a_t__v10.Form1.resources
+C:\Users\User\Desktop\a v t o m a t  v10\a v t o m a t  v10\obj\Debug\a_v_t_o_m_a_t__v10.Properties.Resources.resources
+C:\Users\User\Desktop\a v t o m a t  v10\a v t o m a t  v10\obj\Debug\a v t o m a t  v10.csproj.GenerateResource.cache
+C:\Users\User\Desktop\a v t o m a t  v10\a v t o m a t  v10\obj\Debug\a v t o m a t  v10.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\a v t o m a t  v10\a v t o m a t  v10\obj\Debug\a v t o m a t  v10.exe
+C:\Users\User\Desktop\a v t o m a t  v10\a v t o m a t  v10\obj\Debug\a v t o m a t  v10.pdb
