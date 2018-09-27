@@ -14,3 +14,6 @@ C:\Users\User\Desktop\a v t o m a t  v10\a v t o m a t  v10\obj\Debug\a v t o m 
 C:\Users\User\Desktop\a v t o m a t  v10\a v t o m a t  v10\obj\Debug\a v t o m a t  v10.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\a v t o m a t  v10\a v t o m a t  v10\obj\Debug\a v t o m a t  v10.exe
 C:\Users\User\Desktop\a v t o m a t  v10\a v t o m a t  v10\obj\Debug\a v t o m a t  v10.pdb
+C:\Users\User\Desktop\a v t o m a t  v10\a v t o m a t  v10\bin\Debug\a v t o m a t  v10.exe.config
+C:\Users\User\Desktop\a v t o m a t  v10\a v t o m a t  v10\bin\Debug\a v t o m a t  v10.exe
+C:\Users\User\Desktop\a v t o m a t  v10\a v t o m a t  v10\bin\Debug\a v t o m a t  v10.pdb
